@@ -118,12 +118,27 @@ button,
 
 button {
     cursor: pointer;
+    transform:scale(1);
+    transition: 0.1s ease-out;
+}
+
+button:hover {
+    cursor: pointer;
+    transform:scale(+1.1);
+    transition: 0.3s ease-out;
+}
+
+button:active {
+    cursor: pointer;
+    transform:scale(+0.9);
+    transition: 0.1s ease-out;
 }
 
 button.transparent,
 [role="button"].transparent {
     background: transparent !important;
     color: var(--fg);
+    cursor: default; 
 }
 
 .navbar button,
