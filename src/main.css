@@ -144,6 +144,7 @@ button.transparent,
 .navbar button,
 .navbar [role="button"] {
     font-size: 12px;
+    max-height: 15px;
 }
 
 .loud {
