@@ -9,7 +9,12 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="./src/main.css" />
+    <link rel="preload" href="./src/main.css" as="style" />
+    <link rel="stylesheet" href="./src/main.css">
+    <link rel="preload" href="./src/headerbanner-light.png" as="image" />
+    <link rel="preload" href="./src/headerbanner-dark.png" as="image" />
+    <title>LOUD!</title>
+    <script src="./src/main.js" defer></script>
 </head>
 
 <body>
@@ -32,18 +37,90 @@
         <div class="hero-container">
             <div class="hero-items limit">
                 <div class="hero-title">
-                    <h1>let's get</h1><div class="logo"></div>
+                    <h1>let's get</h1>
+                    <div class="logo"></div>
                 </div>
                 <div class="hero-content">
                     <subtitle>about us</subtitle>
                     <div class="hero-text">
-                    <span class="loud">LOUD<i>!</i></span><span>is a team of young designers catered to create stunning app
-                    designs.
-                    </span>
+                        <span class="loud">LOUD<i>!</i></span><span>is a team of young designers catered to create
+                            stunning app
+                            designs.
+                        </span>
                     </div>
                     <button>meet the team</button>
                 </div>
             </div>
         </div>
     </div>
+    <div class="divider"></div>
+    <div class="limit" id="main">
+        <subtitle>projects</subtitle>
+        <div class="carosel">
+            <button class="overlay carosel-back">
+                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M12 2.91666C10.0716 2.91666 8.18657 3.48848 6.58319 4.55983C4.97982 5.63117 3.73013 7.15391 2.99218 8.93549C2.25422 10.7171 2.06114 12.6775 2.43735 14.5688C2.81355 16.4601 3.74215 18.1974 5.10571 19.5609C6.46928 20.9245 8.20656 21.8531 10.0979 22.2293C11.9892 22.6055 13.9496 22.4124 15.7312 21.6745C17.5127 20.9365 19.0355 19.6868 20.1068 18.0835C21.1782 16.4801 21.75 14.595 21.75 12.6667C21.7473 10.0816 20.7192 7.60327 18.8913 5.77538C17.0634 3.94749 14.585 2.91939 12 2.91666ZM12 20.9167C10.3683 20.9167 8.77326 20.4328 7.41655 19.5263C6.05984 18.6198 5.00242 17.3313 4.378 15.8238C3.75358 14.3163 3.5902 12.6575 3.90853 11.0572C4.22685 9.45682 5.01259 7.98681 6.16637 6.83303C7.32016 5.67924 8.79017 4.89351 10.3905 4.57518C11.9909 4.25685 13.6497 4.42023 15.1571 5.04465C16.6646 5.66907 17.9531 6.7265 18.8596 8.0832C19.7661 9.43991 20.25 11.035 20.25 12.6667C20.2475 14.8539 19.3775 16.9509 17.8309 18.4975C16.2843 20.0442 14.1873 20.9142 12 20.9167ZM14.0306 9.44728L10.8103 12.6667L14.0306 15.886C14.1003 15.9557 14.1556 16.0384 14.1933 16.1295C14.231 16.2205 14.2504 16.3181 14.2504 16.4167C14.2504 16.5152 14.231 16.6128 14.1933 16.7038C14.1556 16.7949 14.1003 16.8776 14.0306 16.9473C13.9609 17.017 13.8782 17.0722 13.7872 17.11C13.6961 17.1477 13.5986 17.1671 13.5 17.1671C13.4015 17.1671 13.3039 17.1477 13.2128 17.11C13.1218 17.0722 13.0391 17.017 12.9694 16.9473L9.21938 13.1973C9.14965 13.1276 9.09433 13.0449 9.05658 12.9539C9.01884 12.8628 8.99941 12.7652 8.99941 12.6667C8.99941 12.5681 9.01884 12.4705 9.05658 12.3795C9.09433 12.2884 9.14965 12.2057 9.21938 12.136L12.9694 8.38603C13.0391 8.31635 13.1218 8.26107 13.2128 8.22336C13.3039 8.18565 13.4015 8.16624 13.5 8.16624C13.5986 8.16624 13.6961 8.18565 13.7872 8.22336C13.8782 8.26107 13.9609 8.31635 14.0306 8.38603C14.1003 8.45571 14.1556 8.53844 14.1933 8.62948C14.231 8.72053 14.2504 8.81811 14.2504 8.91666C14.2504 9.0152 14.231 9.11278 14.1933 9.20383C14.1556 9.29487 14.1003 9.3776 14.0306 9.44728Z"
+                        fill="white" />
+                </svg>
+            </button>
+            <div class="carosel-track">
+                <div class="project-item">
+                    <div class="project-image"></div>
+                    <div class="project-text">
+                        <span>test 1 by @blade0</span>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <div class="project-image">
+                    </div>
+                    <div class="project-text">
+                        <span>test 2 by @blade0</span>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <div class="project-image">
+                    </div>
+                    <div class="project-text">
+                        <span>test 3 by @blade0</span>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <div class="project-image">
+                    </div>
+                    <div class="project-text">
+                        <span>test 4 by @blade0</span>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <div class="project-image">
+                    </div>
+                    <div class="project-text">
+                        <span>test 5 by @blade0</span>
+                    </div>
+                </div>
+            </div>
+            <button class="overlay carosel-forward">
+                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M12 2.91666C10.0716 2.91666 8.18657 3.48848 6.58319 4.55983C4.97982 5.63117 3.73013 7.15391 2.99218 8.93549C2.25422 10.7171 2.06114 12.6775 2.43735 14.5688C2.81355 16.4601 3.74215 18.1974 5.10571 19.5609C6.46928 20.9245 8.20656 21.8531 10.0979 22.2293C11.9892 22.6055 13.9496 22.4124 15.7312 21.6745C17.5127 20.9365 19.0355 19.6868 20.1068 18.0835C21.1782 16.4801 21.75 14.595 21.75 12.6667C21.7473 10.0816 20.7192 7.60327 18.8913 5.77538C17.0634 3.94749 14.585 2.91939 12 2.91666ZM12 20.9167C10.3683 20.9167 8.77326 20.4328 7.41655 19.5263C6.05984 18.6198 5.00242 17.3313 4.378 15.8238C3.75358 14.3163 3.5902 12.6575 3.90853 11.0572C4.22685 9.45682 5.01259 7.98681 6.16637 6.83303C7.32016 5.67924 8.79017 4.89351 10.3905 4.57518C11.9909 4.25685 13.6497 4.42023 15.1571 5.04465C16.6646 5.66907 17.9531 6.7265 18.8596 8.0832C19.7661 9.43991 20.25 11.035 20.25 12.6667C20.2475 14.8539 19.3775 16.9509 17.8309 18.4975C16.2843 20.0442 14.1873 20.9142 12 20.9167ZM14.7806 12.136C14.8504 12.2057 14.9057 12.2884 14.9434 12.3795C14.9812 12.4705 15.0006 12.5681 15.0006 12.6667C15.0006 12.7652 14.9812 12.8628 14.9434 12.9539C14.9057 13.0449 14.8504 13.1276 14.7806 13.1973L11.0306 16.9473C10.9609 17.017 10.8782 17.0722 10.7872 17.11C10.6961 17.1477 10.5986 17.1671 10.5 17.1671C10.4015 17.1671 10.3039 17.1477 10.2128 17.11C10.1218 17.0722 10.0391 17.017 9.96938 16.9473C9.8997 16.8776 9.84442 16.7949 9.80671 16.7038C9.769 16.6128 9.74959 16.5152 9.74959 16.4167C9.74959 16.3181 9.769 16.2205 9.80671 16.1295C9.84442 16.0384 9.8997 15.9557 9.96938 15.886L13.1897 12.6667L9.96938 9.44728C9.82865 9.30655 9.74959 9.11568 9.74959 8.91666C9.74959 8.71763 9.82865 8.52676 9.96938 8.38603C10.1101 8.2453 10.301 8.16624 10.5 8.16624C10.699 8.16624 10.8899 8.2453 11.0306 8.38603L14.7806 12.136Z"
+                        fill="white" />
+                </svg>
+            </button>
+        </div>
+    </div>
+    <div class="divider"></div>
+    <footer>
+
+        <div class="footer-left">
+           <div class="logo"></div>
+        </div>
+        <div class="footer-right">
+            <span>© 2024 LOUD! Designs. All rights reserved.</span>
+            <span>Website designed by <a href="https://jasonsika.com">Jason Sika</a>, <a
+                    href="https://blade0.net">Blade0</a> & Akuro (mockup)</span>
+        </div>
+    </footer>
 </body>
+
+</html>
