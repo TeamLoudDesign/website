@@ -275,6 +275,7 @@ nav {
             content: " (light)";
         }
     }
+
     svg {
         margin-right: 5px;
     }
@@ -379,10 +380,11 @@ subtitle {
     letter-spacing: 0.12px;
     text-transform: uppercase;
     margin: 0;
->svg {
-    margin-bottom: -3px!important;
-    margin-right: 5px;
-}
+
+    >svg {
+        margin-bottom: -3px !important;
+        margin-right: 5px;
+    }
 }
 
 
@@ -564,11 +566,14 @@ a {
 }
 
 
-div>svg>path, subtitle>svg>path {
-fill: var(--fg)!important;
+div>svg>path,
+subtitle>svg>path {
+    fill: var(--fg) !important;
 }
 
-button>svg>path, [role=button]>svg>path {
+button:not(.overlay)>svg>path,
+[role=button]>svg>path,
+button:not(.overlay)>svg>g>path {
     fill: var(--btn-fg);
 }
 
@@ -578,4 +583,123 @@ button>svg>path, [role=button]>svg>path {
 
 button>.figure-wave>.col-morph-stroke {
     stroke: var(--btn-fg);
+}
+
+
+
+body:has(>.navbar-container) {
+    margin-top: 65px;
+
+    .navbar-container {
+        background: var(--bg);
+    }
+}
+
+.container {
+    display: flex;
+    padding: 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 30px;
+    border: 1px solid color-mix(in srgb, var(--bg), var(--fg) 20%);
+}
+
+button.tile {
+    display: flex;
+    padding: 20px 32px;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    flex: 1 1 0;
+    border-radius: 20px;
+box-sizing: border-box;
+min-width: 149px;
+    >span {
+        leading-trim: both;
+        text-edge: cap;
+        font-family: Inter;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: normal;
+        letter-spacing: -0.28px;
+        text-transform: uppercase;
+    }
+}
+
+button.tile.sika:hover,
+button.tile.sika:focus,
+.sika:not(button.tile) {
+    --fg: #3DABFF;
+    --btn-fg: white;
+}
+
+button.tile.akuro:hover,
+button.tile.akuro:focus,
+.akuro:not(button.tile) {
+    --fg: #FF008F;
+    --btn-fg: #1D0E41;
+}
+
+button.tile.qirkl:hover,
+button.tile.qirkl:focus,
+.qirkl:not(button.tile) {
+    --fg: #3CFADA;
+    --btn-fg: #000000;
+}
+
+button.tile.atombot:hover,
+button.tile.atombot:focus,
+.atombot:not(button.tile) {
+    --fg: #FF9946;
+    --btn-fg: #000000;
+}
+
+button.tile.aidak:hover,
+button.tile.aidak:focus,
+.aidak:not(button.tile) {
+    --fg: #8877FF;
+    --btn-fg: white;
+}
+
+button.tile.blade0:hover,
+button.tile.blade0:focus,
+.blade0:not(button.tile) {
+    --fg: #3754d3;
+    --btn-fg: white;
+}
+
+button.tile.drexel:hover,
+button.tile.drexel:focus,
+.drexel:not(button.tile) {
+    --fg: black;
+    --btn-fg: white;
+}
+
+button.tile.ramenzack:hover,
+button.tile.ramenzack:focus,
+.ramenzack:not(button.tile) {
+    --fg: #00FFA6;
+    --btn-fg: black;
+}
+
+button.tile.lostliano:hover,
+button.tile.lostliano:focus,
+.lostliano:not(button.tile) {
+    --fg: #1E1E1E;
+    --btn-fg: white;
+}
+
+button.tile.doromiert:hover,
+button.tile.doromiert:focus,
+.doromiert:not(button.tile),
+button.tile.doritos:hover,
+button.tile.doritos:focus,
+.doritos:not(button.tile) {
+    --fg: #C86959;
+    --btn-fg: #5A170E;
 }

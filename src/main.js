@@ -15,3 +15,4 @@ prevButton.addEventListener("click", () => {
 
 // mad respect to privacy people with no js, blade loves you mwah
 document.querySelectorAll('.nojs').forEach(elem => elem.remove());
+
